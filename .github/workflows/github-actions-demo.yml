@@ -3,16 +3,16 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   DEV:
-    runs-on: github-runner-az
+    runs-on: self-hosted
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   QAS:
     needs: DEV
-    runs-on: github-runner-az
+    runs-on: self-hosted
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   PROD:
     needs: [DEV, QAS]
-    runs-on: github-runner-az
+    runs-on: self-hosted
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
