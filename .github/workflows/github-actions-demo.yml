@@ -5,7 +5,13 @@ jobs:
   DEV:
     runs-on: self-hosted
     steps:
-    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+    - name: Checkout Cart Helm repo
+      uses: actions/checkout@v4
+      with:
+        repository: azawsdevops/roboshop-cart
+    - run: |
+        ls -l
+        echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   QAS:
     needs: DEV
     runs-on: self-hosted
