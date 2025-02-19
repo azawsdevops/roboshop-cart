@@ -8,9 +8,9 @@ jobs:
     - name: Checkout Cart Helm repo
       uses: actions/checkout@v4
       with:
-        repository: azawsdevops/roboshop-cart
+        repository: azawsdevops/aks-roboshop-helm
     - run: |
-        ls -l
+        bash argocd.sh cart dev
         echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   QAS:
     needs: DEV
