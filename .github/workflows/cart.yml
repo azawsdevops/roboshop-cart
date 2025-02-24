@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Cart helm deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [workflow_dispatch]
 jobs:
@@ -14,6 +14,7 @@ jobs:
         echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   QAS:
     needs: DEV
+    on: [push]
     runs-on: self-hosted
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
