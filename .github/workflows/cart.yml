@@ -2,26 +2,5 @@ name: Cart helm deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [workflow_dispatch]
 jobs:
-  DEV:
-    runs-on: self-hosted
-    steps:
-    - name: Checkout Cart Helm repo
-      uses: actions/checkout@v4
-      with:
-        repository: azawsdevops/aks-roboshop-helm
-    - run: |
-        bash argocd.sh cart dev
-        echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-  QAS:
-    needs: DEV
-    on: [push]
-    runs-on: self-hosted
-    steps:
-    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-  PROD:
-    needs: [DEV, QAS]
-    runs-on: self-hosted
-    steps:
-    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-    
-    ###
+  deploy:
+    uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
