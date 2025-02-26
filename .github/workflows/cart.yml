@@ -1,6 +1,6 @@
 name: Cart helm deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [workflow_dispatch]
+on: [push]
 jobs:
   deploy:
     uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
