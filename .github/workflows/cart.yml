@@ -1,5 +1,8 @@
-name: Cart 
-on: push
+name: Cart
+on:
+  push:
+    branches:
+    - main
 jobs:
   ci:
     runs-on: self-hosted
