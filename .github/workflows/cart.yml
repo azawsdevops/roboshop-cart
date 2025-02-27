@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - main
+
 jobs:
   call-workflow-passing-data:
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
