@@ -1,12 +1,12 @@
-name: Call a reusable workflow -ci
 
+name: Cart CICD - Main Branch
+run-name: Cart CICD - Main Branch
 on:
   push:
     branches:
     - main
-
 jobs:
-  call-workflow-passing-data:
-    uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
+  ci:
+    uses: azawsdevops/ithub-reusable-modules/.github/workflows/ci.yaml@main
     with:
       component: cart
