@@ -1,13 +1,14 @@
 name: Cart 
 on: push
 jobs:
-  runs-on: self-hosted
   ci:
+    runs-on: self-hosted
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
     with:
       component: cart
       
   deploy:
+    runs-on: self-hosted
     uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
     needs: ci
     with:
