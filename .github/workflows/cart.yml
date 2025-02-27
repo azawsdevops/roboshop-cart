@@ -7,7 +7,7 @@ on:
     - main
 jobs:
   ci:
-    uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
+    uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
     with:
       component: cart
       
