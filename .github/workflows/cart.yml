@@ -7,7 +7,7 @@ jobs:
       component: cart
       
   deploy:
-  uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
-  needs: ci
-  with:
-    component: cart
+    uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
+    needs: ci
+    with:
+      component: cart
