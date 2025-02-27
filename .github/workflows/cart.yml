@@ -1,14 +1,13 @@
-name: Cart helm deploy
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs: 
+name: Cart 
+on: push
+jobs:
   ci:
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
     with:
       component: cart
       
   deploy:
-    uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
-    needs: ci
-    with:
-      component: cart
+  uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
+  needs: ci
+  with:
+    component: cart
