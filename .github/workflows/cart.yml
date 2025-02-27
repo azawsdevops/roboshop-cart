@@ -1,19 +1,12 @@
-name: Cart
+
+name: Cart CICD 
+run-name: Cart CICD 
 on:
   push:
     branches:
     - main
 jobs:
   ci:
-    runs-on: self-hosted
-    uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
-    with:
-      component: cart
-      
-  deploy:
-    runs-on: self-hosted
     uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
-    needs: ci
     with:
       component: cart
-      
