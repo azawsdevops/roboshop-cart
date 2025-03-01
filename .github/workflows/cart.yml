@@ -9,7 +9,10 @@ jobs:
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
     with:
       component: cart
+      appType: nodejs
+      
   deploy:
     uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
     with:
       component: cart
+      
