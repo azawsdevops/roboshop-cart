@@ -10,7 +10,8 @@ jobs:
     with:
       component: cart
       appType: nodejs
-      
+    secrets:
+      vault_TOKEN: ${{ secrets.VAULT_TOKEN }}
   deploy:
     uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
     with:
