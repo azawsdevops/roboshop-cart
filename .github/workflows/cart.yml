@@ -3,7 +3,7 @@ run-name: Cart CICD - Dev Branch
 on:
   push:
     branches:
-    - 'RB-**'
+    - main
 jobs:
   ci:
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
