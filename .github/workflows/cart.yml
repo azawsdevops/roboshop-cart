@@ -1,10 +1,9 @@
-name: Cart CICD - Main Branch
-run-name: Cart CICD - Main Branch
+name: Cart CICD - Dev Branch
+run-name: Cart CICD - Dev Branch
 on:
   push:
     branches:
-    - main
-
+    - 'RB-**'
 jobs:
   ci:
     uses: azawsdevops/github-reusable-modules/.github/workflows/ci.yaml@main
