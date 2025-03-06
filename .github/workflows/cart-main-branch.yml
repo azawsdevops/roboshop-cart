@@ -1,0 +1,19 @@
+name: Cart CICD - main Branch
+run-name: Cart CICD - main Branch
+on:
+  push:
+    branches:
+    - 'RB-**'
+jobs:
+  ci:
+    uses: azawsdevops/github-reusable-modules/.github/workflows/ci-main-branch.yaml@main
+    with:
+      component: cart
+      appType: nodejs
+    secrets:
+      VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+      
+  deploy:
+    uses: azawsdevops/github-reusable-modules/.github/workflows/deploy.yaml@main
+    with:
+      component: cart

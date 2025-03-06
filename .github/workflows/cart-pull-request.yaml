@@ -1,0 +1,14 @@
+name: Cart CICD - Dev Branch
+run-name: Cart CICD - Dev Branch
+on:
+  push:
+    branches:
+    - main
+jobs:
+  ci:
+    uses: azawsdevops/github-reusable-modules/.github/workflows/pull-request.yaml@main
+    with:
+      component: cart
+      appType: nodejs
+    secrets:
+      VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
