@@ -4,11 +4,6 @@ on:
   push:
     branches:
     - 'RB-**'
-    inputs:
-      component:
-        required: true
-        type: string
-
 jobs:
   ci:
     uses: azawsdevops/github-reusable-modules/.github/workflows/dev-branch.yaml@main
