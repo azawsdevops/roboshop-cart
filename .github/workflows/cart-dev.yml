@@ -6,7 +6,7 @@ on:
     - 'RB-**'
 jobs:
   ci:
-    uses: azawsdevops/github-reusable-modules/blob/main/.github/workflows/dev-branch.yaml
+    uses: azawsdevops/github-reusable-modules/blob/main/.github/workflows/dev-branch.yaml@main
     with:
       component: cart
       appType: nodejs
