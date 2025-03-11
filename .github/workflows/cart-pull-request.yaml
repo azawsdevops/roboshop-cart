@@ -12,3 +12,4 @@ jobs:
       appType: nodejs
     secrets:
       VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+      
