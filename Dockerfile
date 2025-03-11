@@ -1,6 +1,14 @@
-FROM        node
-USER        node
-WORKDIR     /home/node
-COPY        node_modules/ node_modules/
-COPY        package.json server.js ./
-ENTRYPOINT  ["node", "server.js"]
+#FROM        node
+#USER        node
+#WORKDIR     /home/node
+#COPY        node_modules/ node_modules/
+#COPY        package.json server.js ./
+#ENTRYPOINT  ["node", "server.js"]
+#
+FROM node 
+USER node
+WORKDIR /home/node
+COPY package.json package-lock.json ./
+RUN npm install --omit=dev
+COPY . .
+ENTRYPOINT ["node", "server.js"]
