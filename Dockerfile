@@ -12,10 +12,10 @@ ENTRYPOINT  ["node", "server.js"]
 #RUN npm install --omit=dev
 #COPY . .
 #ENTRYPOINT ["node", "server.js"]
-
-
-
-FROM node:18
-COPY package.json server.js ./
-RUN npm install --omit=dev
-USER node
+#
+#
+#
+#FROM node:18
+#COPY package.json server.js ./
+#RUN npm install --omit=dev
+#USER node
