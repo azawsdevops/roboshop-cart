@@ -8,7 +8,7 @@
 FROM node 
 USER node
 WORKDIR /home/node
-COPY package.json package-lock.json ./
+COPY package.json server.js ./
 RUN npm install --omit=dev
 COPY . .
 ENTRYPOINT ["node", "server.js"]
