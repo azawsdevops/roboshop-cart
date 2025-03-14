@@ -13,3 +13,4 @@ RUN npm install --omit=dev
 COPY . .
 ENTRYPOINT ["node", "server.js"]
 
+
