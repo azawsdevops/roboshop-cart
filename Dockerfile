@@ -5,12 +5,12 @@
 #USER        node
 #ENTRYPOINT  ["node", "server.js"]
 ##
-FROM node 
-USER node
+FROM node:18
 WORKDIR /home/node
 COPY package.json server.js ./
 RUN npm install --omit=dev
 COPY . .
+USER node
 ENTRYPOINT ["node", "server.js"]
 
 #
