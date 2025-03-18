@@ -8,7 +8,7 @@
 FROM node:18
 WORKDIR /home/node
 COPY package.json server.js ./
-RUN npm install --omit=dev
+RUN npm install
 COPY . .
 USER node
 ENTRYPOINT ["node", "server.js"]
